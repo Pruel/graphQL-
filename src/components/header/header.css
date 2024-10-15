@@ -1,0 +1,45 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000; /* Чёрный фон */
+  }
+  
+  .logo img {
+    height: 50px;
+    filter: grayscale(100%); /* Преобразование логотипа в чёрно-белый */
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff; /* Белый текст */
+    font-size: 16px;
+  }
+  
+  .profile-link:hover {
+    text-decoration: underline;
+  }
+  
+  .logout-button {
+    padding: 8px 16px;
+    background-color: #fff; /* Белый фон */
+    color: #000; /* Чёрный текст */
+    border: 1px solid #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .logout-button:hover {
+    background-color: #ccc; /* Светло-серый фон при наведении */
+    border-color: #ccc;
+  }
+  
