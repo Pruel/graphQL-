@@ -1,45 +1,61 @@
-/* Header.css */
+/* src/components/header/header.css */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #000; /* Чёрный фон */
-  }
-  
-  .logo img {
-    height: 50px;
-    filter: grayscale(100%); /* Преобразование логотипа в чёрно-белый */
-  }
-  
-  .header-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-link {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #fff; /* Белый текст */
-    font-size: 16px;
-  }
-  
-  .profile-link:hover {
-    text-decoration: underline;
-  }
-  
-  .logout-button {
-    padding: 8px 16px;
-    background-color: #fff; /* Белый фон */
-    color: #000; /* Чёрный текст */
-    border: 1px solid #fff;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .logout-button:hover {
-    background-color: #ccc; /* Светло-серый фон при наведении */
-    border-color: #ccc;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #000;
+  border-bottom: 2px solid #ccc;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+.profile-link {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  z-index: 1;
+  padding: 10px;
+}
+
+.user-info p {
+  margin: 5px 0;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #000;
+}
+
+.logout-button:hover {
+  background-color: #f0f0f0;
+}
