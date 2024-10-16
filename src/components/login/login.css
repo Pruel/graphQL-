@@ -1,70 +1,84 @@
-.login-page {
-  height: 100vh;
-  background-color: #000; /* Black background */
+/* src/components/login/login.css */
+
+body {
+  background-color: #000; /* Чёрный фон для всей страницы */
+}
+
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh; /* Высота на весь экран */
 }
 
 .login-form {
-  background-color: #fff; /* White form */
+  background-color: #fff; /* Белый фон для формы */
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  width: 300px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-}
-
-.login-form:hover {
-  transform: translateY(-5px);
+  width: 400px; /* Ширина формы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .login-form h2 {
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 30px;
   color: #000;
 }
 
 .input-group {
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 30px;
 }
 
 .input-group input {
   width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ccc; /* Grey thin border */
-  border-radius: 4px;
-  background-color: #fff;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Тонкий серый контур снизу */
+  background: transparent;
+  outline: none;
+  color: #000;
   font-size: 16px;
 }
 
-.input-group input:focus {
-  border-color: #000; /* Black border on focus */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  outline: none;
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease all;
 }
 
-.error-message {
-  color: #e53935; /* Red color for error messages */
-  text-align: center;
-  margin-bottom: 15px;
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #000;
+}
+
+.input-group input:focus {
+  border-bottom: 1px solid #000; /* Чёрная подсветка при фокусе */
 }
 
 .login-button {
   width: 100%;
   padding: 12px;
-  background-color: #000; /* Black button */
-  color: #fff; /* White text */
+  background-color: #000; /* Чёрная кнопка */
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 .login-button:hover {
-  background-color: #333; /* Darker black on hover */
+  background-color: #333;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
 }

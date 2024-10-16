@@ -14,7 +14,6 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        {/* Ссылка на главную страницу */}
         <Link to="/profile">
           <img src="/images/logo.png" alt="GraphQL Logo" />
         </Link>
@@ -24,7 +23,7 @@ function Header() {
           Profile
         </Link>
         <button onClick={handleLogout} className="logout-button">
-          Sigh out
+          Log Out
         </button>
       </div>
     </header>
