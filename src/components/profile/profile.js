@@ -1,5 +1,3 @@
-// src/components/profile/profile.js
-
 import React, { useEffect, useState } from 'react';
 import { getUserData, getTotalXP } from '../../services/graph';
 import { useUserId } from '../../services/auth';
